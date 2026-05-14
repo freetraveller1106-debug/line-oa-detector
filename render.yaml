@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: line-oa-detector
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: SERPER_KEY
+        value: b4c4bc880dac3f8ffb8e0d23215ea87abca94e7f
+      - key: NODE_ENV
+        value: production
